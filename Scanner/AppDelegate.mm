@@ -5,7 +5,7 @@
 */
 
 #import "AppDelegate.h"
-#import "ViewController.h"
+#import "HomeViewController.h"
 
 //------------------------------------------------------------------------------
 
@@ -13,23 +13,28 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if (false)
-    {
-        // STWirelessLog is very helpful for debugging while your Structure Sensor is plugged in.
-        // See SDK documentation for how to start a listener on your computer.
+//    if (false)
+//    {
+//        // STWirelessLog is very helpful for debugging while your Structure Sensor is plugged in.
+//        // See SDK documentation for how to start a listener on your computer.
+//
+//        NSError* error = nil;
+//        NSString *remoteLogHost = @"192.168.1.1";
+//        [STWirelessLog broadcastLogsToWirelessConsoleAtAddress:remoteLogHost usingPort:4999 error:&error];
+//        if (error)
+//            NSLog(@"Oh no! Can't start wireless log: %@", [error localizedDescription]);
+//    }
+//
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.viewController = [ViewController viewController];
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
 
-        NSError* error = nil;
-        NSString *remoteLogHost = @"192.168.1.1";
-        [STWirelessLog broadcastLogsToWirelessConsoleAtAddress:remoteLogHost usingPort:4999 error:&error];
-        if (error)
-            NSLog(@"Oh no! Can't start wireless log: %@", [error localizedDescription]);
-    }
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [ViewController viewController];
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+    HomeViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"HomeViewController"];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController: viewController];
+    self.window.rootViewController = navigation;
     
     return YES;
 }
