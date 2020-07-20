@@ -461,6 +461,28 @@
     self.trackingLostLabel.hidden = YES;
 }
 
+- (void)showBatteryLevelMessage {
+    
+    if (!_captureSession) {
+        return;
+    }
+    
+    if(_captureSession.sensorMode == STCaptureSessionSensorModeNotConnected) {
+        return;
+    }
+    
+    NSString *sensorBattery = NSLocalizedString(@"Sensor Battery", "");
+    NSString *sensorLowBattery = NSLocalizedString(@"Please Charge the Sensor Battery. Currently it's at", "");
+    
+    if(_captureSession.sensorBatteryLevel > 30) {
+        self.SensorBatteryLevel.text = [NSString stringWithFormat:@"%@ : %d %%", sensorBattery, _captureSession.sensorBatteryLevel];
+        self.SensorBatteryLevel.backgroundColor = [UIColor clearColor];
+    } else {
+        self.SensorBatteryLevel.text = [NSString stringWithFormat:@"%@ %d %%", sensorLowBattery, _captureSession.sensorBatteryLevel];
+        self.SensorBatteryLevel.backgroundColor = [UIColor redColor];
+    }
+}
+
 - (void)showAppStatusMessage:(NSString *)msg
 {
     _appStatus.needsDisplayOfStatusMessage = true;

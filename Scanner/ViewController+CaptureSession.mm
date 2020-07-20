@@ -140,6 +140,10 @@
     switch(mode)
     {
         case STCaptureSessionSensorModeReady:
+            
+            [self showBatteryLevelMessage];
+            break;
+            
         case STCaptureSessionSensorModeWakingUp:
         case STCaptureSessionSensorModeStandby:
         case STCaptureSessionSensorModeNotConnected:
