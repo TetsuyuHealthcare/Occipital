@@ -87,6 +87,12 @@
     // We will connect to the sensor when we receive appDidBecomeActive.
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
+}
+
 - (void)appDidBecomeActive
 {
     // Try to connect to the Structure Sensor and stream if necessary.
@@ -633,6 +639,13 @@
             }
         }
     }
+}
+
+- (IBAction)cancel:(id)sender {
+    _meshViewController = nil;
+    _captureSession.streamingEnabled = NO;
+    _captureSession = nil;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - MeshViewController delegates
