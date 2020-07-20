@@ -265,6 +265,7 @@ struct DisplayData
 @property (weak, nonatomic) IBOutlet UIView *firmwareUpdateView;
 @property (weak, nonatomic) IBOutlet UIImageView *structureAppIcon;
 @property (weak, nonatomic) IBOutlet UIButton *updateNowButton;
+@property (weak, nonatomic) IBOutlet UILabel *SensorBatteryLevel;
 
 - (IBAction)scanButtonPressed:(id)sender;
 - (IBAction)resetButtonPressed:(id)sender;
@@ -283,5 +284,6 @@ struct DisplayData
 - (void)hideTrackingErrorMessage;
 - (void)processDeviceMotion:(CMDeviceMotion *)motion withError:(NSError *)error;
 - (void)onSLAMOptionsChanged;
+- (void)showBatteryLevelMessage;
 
 @end

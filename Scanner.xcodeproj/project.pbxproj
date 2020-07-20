@@ -52,6 +52,8 @@
 		7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */; };
 		DC04307024C57766005EF512 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC04306F24C57765005EF512 /* Structure.framework */; };
 		DC04307124C57766005EF512 /* Structure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC04306F24C57765005EF512 /* Structure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DC04307424C57898005EF512 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC04307324C57898005EF512 /* Home.storyboard */; };
+		DC04307724C578AC005EF512 /* HomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC04307624C578AC005EF512 /* HomeViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,6 +132,9 @@
 		7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUIKitStyles.h; sourceTree = "<group>"; };
 		8D52B62A21543D97002DCCF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/ViewController.xib; sourceTree = "<group>"; };
 		DC04306F24C57765005EF512 /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = Frameworks/Structure.framework; sourceTree = "<group>"; };
+		DC04307324C57898005EF512 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		DC04307524C578AC005EF512 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		DC04307624C578AC005EF512 /* HomeViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HomeViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +243,9 @@
 				3FA9E30C22E6161800F52CE2 /* SettingsPopupView.mm */,
 				1F300614186E3B8F00405D34 /* Images.xcassets */,
 				433C3B9D186CBEA900552A10 /* Supporting Files */,
+				DC04307324C57898005EF512 /* Home.storyboard */,
+				DC04307524C578AC005EF512 /* HomeViewController.h */,
+				DC04307624C578AC005EF512 /* HomeViewController.mm */,
 			);
 			path = Scanner;
 			sourceTree = SOURCE_ROOT;
@@ -330,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F7803CB186285E10005E6CD /* InfoPlist.strings in Resources */,
+				DC04307424C57898005EF512 /* Home.storyboard in Resources */,
 				435307CA1872825B00B04481 /* Default-Landscape~ipad.png in Resources */,
 				435307C81872825B00B04481 /* Default-Landscape@2x~ipad.png in Resources */,
 				1F09D489246341380079DE54 /* LaunchScreen.storyboard in Resources */,
@@ -377,6 +386,7 @@
 				3F936DA422E64AB500D851E3 /* ViewUtilities.mm in Sources */,
 				2AB955C5184E573A003DA089 /* MeshViewController.mm in Sources */,
 				2A1557BD1A37D198007C485A /* ViewController+OpenGL.mm in Sources */,
+				DC04307724C578AC005EF512 /* HomeViewController.mm in Sources */,
 				3FA9E30D22E6161800F52CE2 /* SettingsPopupView.mm in Sources */,
 				2AEF46201A127B4900CAF953 /* ViewController+SLAM.mm in Sources */,
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,

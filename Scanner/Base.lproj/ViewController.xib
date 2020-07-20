@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
+                <outlet property="SensorBatteryLevel" destination="FIn-E7-7PC" id="fnU-8r-jQe"/>
                 <outlet property="appStatusMessageLabel" destination="6ly-If-uZh" id="N1A-tf-yUE"/>
                 <outlet property="doneButton" destination="mZb-la-8Ct" id="e73-HP-m5Y"/>
                 <outlet property="firmwareUpdateView" destination="50o-bM-3Ow" id="OBy-hI-ogO"/>
@@ -141,18 +142,42 @@ Try to re-align or press reset.</string>
                         <constraint firstAttribute="width" constant="360" id="sEQ-Is-Q1U"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIn-E7-7PC">
+                    <rect key="frame" x="962" y="38" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDA-Kp-AcS" userLabel="Button - Done">
+                    <rect key="frame" x="20" y="356" width="71" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="cnw-Jv-Ibn"/>
+                        <constraint firstAttribute="width" constant="71" id="qoh-ic-hzx"/>
+                    </constraints>
+                    <state key="normal" title="Cancel">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancel:" destination="-1" eventType="touchUpInside" id="0Wv-FN-4y9"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <gestureRecognizers/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="6ly-If-uZh" secondAttribute="bottom" id="0eh-TY-f6N"/>
                 <constraint firstItem="mZb-la-8Ct" firstAttribute="centerX" secondItem="ten-ab-OVy" secondAttribute="centerX" id="By1-W0-nxx"/>
+                <constraint firstItem="pDA-Kp-AcS" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="CDQ-Ik-idT"/>
                 <constraint firstItem="mZb-la-8Ct" firstAttribute="centerY" secondItem="J7F-Wp-rfI" secondAttribute="centerY" id="L6q-XC-guk"/>
                 <constraint firstAttribute="trailing" secondItem="6ly-If-uZh" secondAttribute="trailing" id="QE8-NK-kvX"/>
                 <constraint firstItem="ten-ab-OVy" firstAttribute="top" secondItem="mZb-la-8Ct" secondAttribute="bottom" constant="40" id="Sy8-1m-1JR"/>
+                <constraint firstItem="FIn-E7-7PC" firstAttribute="top" secondItem="1" secondAttribute="top" constant="38" id="Ti9-57-iMx"/>
                 <constraint firstItem="6ly-If-uZh" firstAttribute="centerY" secondItem="1" secondAttribute="centerY" id="X5t-8h-bVU"/>
                 <constraint firstItem="8b4-Zl-yJD" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="Xxi-q3-0vj"/>
                 <constraint firstItem="6ly-If-uZh" firstAttribute="top" secondItem="1" secondAttribute="top" id="Zyd-kR-EXJ"/>
+                <constraint firstItem="pDA-Kp-AcS" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="a1V-F3-rRc"/>
+                <constraint firstAttribute="trailing" secondItem="FIn-E7-7PC" secondAttribute="trailing" constant="62" id="ac9-zF-HNY"/>
                 <constraint firstItem="roX-oJ-mYx" firstAttribute="top" secondItem="1" secondAttribute="top" constant="20" id="cTY-Ue-beb"/>
                 <constraint firstItem="roX-oJ-mYx" firstAttribute="centerX" secondItem="1" secondAttribute="centerX" id="fop-zd-86d"/>
                 <constraint firstItem="8b4-Zl-yJD" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="hZU-FA-zyJ"/>

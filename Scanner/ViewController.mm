@@ -66,6 +66,12 @@
     [self enterCubePlacementState];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+}
+
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -79,6 +85,12 @@
     
     
     // We will connect to the sensor when we receive appDidBecomeActive.
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[self navigationController] setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)appDidBecomeActive
@@ -449,6 +461,28 @@
     self.trackingLostLabel.hidden = YES;
 }
 
+- (void)showBatteryLevelMessage {
+    
+    if (!_captureSession) {
+        return;
+    }
+    
+    if(_captureSession.sensorMode == STCaptureSessionSensorModeNotConnected) {
+        return;
+    }
+    
+    NSString *sensorBattery = NSLocalizedString(@"Sensor Battery", "");
+    NSString *sensorLowBattery = NSLocalizedString(@"Please Charge the Sensor Battery. Currently it's at", "");
+    
+    if(_captureSession.sensorBatteryLevel > 30) {
+        self.SensorBatteryLevel.text = [NSString stringWithFormat:@"%@ : %d %%", sensorBattery, _captureSession.sensorBatteryLevel];
+        self.SensorBatteryLevel.backgroundColor = [UIColor clearColor];
+    } else {
+        self.SensorBatteryLevel.text = [NSString stringWithFormat:@"%@ %d %%", sensorLowBattery, _captureSession.sensorBatteryLevel];
+        self.SensorBatteryLevel.backgroundColor = [UIColor redColor];
+    }
+}
+
 - (void)showAppStatusMessage:(NSString *)msg
 {
     _appStatus.needsDisplayOfStatusMessage = true;
@@ -627,6 +661,13 @@
             }
         }
     }
+}
+
+- (IBAction)cancel:(id)sender {
+    _meshViewController = nil;
+    _captureSession.streamingEnabled = NO;
+    _captureSession = nil;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - MeshViewController delegates
