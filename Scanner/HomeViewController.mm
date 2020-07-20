@@ -20,7 +20,8 @@
 }
 
 - (IBAction)scan:(id)sender {
-    
+    _viewController = [ViewController viewController];
+    [self.navigationController pushViewController:_viewController animated:YES];
 }
 
 @end

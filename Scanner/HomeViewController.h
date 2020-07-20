@@ -7,10 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewController.h"
+
+@class ViewController;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HomeViewController : UIViewController
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end
 

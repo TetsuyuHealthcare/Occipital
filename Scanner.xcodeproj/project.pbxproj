@@ -53,7 +53,7 @@
 		DC04307024C57766005EF512 /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC04306F24C57765005EF512 /* Structure.framework */; };
 		DC04307124C57766005EF512 /* Structure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC04306F24C57765005EF512 /* Structure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC04307424C57898005EF512 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC04307324C57898005EF512 /* Home.storyboard */; };
-		DC04307724C578AC005EF512 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC04307624C578AC005EF512 /* HomeViewController.m */; };
+		DC04307724C578AC005EF512 /* HomeViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = DC04307624C578AC005EF512 /* HomeViewController.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,7 +134,7 @@
 		DC04306F24C57765005EF512 /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = Frameworks/Structure.framework; sourceTree = "<group>"; };
 		DC04307324C57898005EF512 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		DC04307524C578AC005EF512 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		DC04307624C578AC005EF512 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		DC04307624C578AC005EF512 /* HomeViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HomeViewController.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,7 +245,7 @@
 				433C3B9D186CBEA900552A10 /* Supporting Files */,
 				DC04307324C57898005EF512 /* Home.storyboard */,
 				DC04307524C578AC005EF512 /* HomeViewController.h */,
-				DC04307624C578AC005EF512 /* HomeViewController.m */,
+				DC04307624C578AC005EF512 /* HomeViewController.mm */,
 			);
 			path = Scanner;
 			sourceTree = SOURCE_ROOT;
@@ -386,7 +386,7 @@
 				3F936DA422E64AB500D851E3 /* ViewUtilities.mm in Sources */,
 				2AB955C5184E573A003DA089 /* MeshViewController.mm in Sources */,
 				2A1557BD1A37D198007C485A /* ViewController+OpenGL.mm in Sources */,
-				DC04307724C578AC005EF512 /* HomeViewController.m in Sources */,
+				DC04307724C578AC005EF512 /* HomeViewController.mm in Sources */,
 				3FA9E30D22E6161800F52CE2 /* SettingsPopupView.mm in Sources */,
 				2AEF46201A127B4900CAF953 /* ViewController+SLAM.mm in Sources */,
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,
