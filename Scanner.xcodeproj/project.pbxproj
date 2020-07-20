@@ -32,8 +32,6 @@
 		2DC7D69818438E1D005BEE8B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC7D69618438E1D005BEE8B /* CoreMotion.framework */; };
 		2DC7D69A18438E42005BEE8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC7D69918438E42005BEE8B /* Accelerate.framework */; };
 		2DE057BD199E58E100137F8F /* ViewpointController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DE057BC199E58E100137F8F /* ViewpointController.mm */; };
-		3F355EBD2332DE3200FF559E /* Structure.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F355EBC2332DE3200FF559E /* Structure.framework */; };
-		3F355EBE2332DE3B00FF559E /* Structure.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F355EBC2332DE3200FF559E /* Structure.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3F37E7612242A05F00C7EF10 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F37E7602242A05F00C7EF10 /* libz.tbd */; };
 		3F7555DB21277E7B00B0B89D /* ViewController+CaptureSession.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3F7555DA21277E7B00B0B89D /* ViewController+CaptureSession.mm */; };
 		3F7555DD21277E8A00B0B89D /* MetalPerformanceShaders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7555DC21277E8A00B0B89D /* MetalPerformanceShaders.framework */; };
@@ -53,20 +51,6 @@
 		77AAADA51CA5AFC500D91B6C /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77AAADA41CA5AFC500D91B6C /* Metal.framework */; };
 		7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		3F5E177623319B460048CE71 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3F355EBE2332DE3B00FF559E /* Structure.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F09D488246341380079DE54 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "Supporting Files/LaunchScreen.storyboard"; sourceTree = "<group>"; };
@@ -103,7 +87,6 @@
 		2DC7D69618438E1D005BEE8B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2DC7D69918438E42005BEE8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		2DE057BC199E58E100137F8F /* ViewpointController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewpointController.mm; sourceTree = "<group>"; };
-		3F355EBC2332DE3200FF559E /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = ../Frameworks/Structure.framework; sourceTree = "<group>"; };
 		3F37E7602242A05F00C7EF10 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3F7555D921277E7B00B0B89D /* ViewController+CaptureSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+CaptureSession.h"; sourceTree = "<group>"; };
 		3F7555DA21277E7B00B0B89D /* ViewController+CaptureSession.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "ViewController+CaptureSession.mm"; sourceTree = "<group>"; };
@@ -139,7 +122,6 @@
 			files = (
 				3F37E7612242A05F00C7EF10 /* libz.tbd in Frameworks */,
 				3F7555DF21277E9200B0B89D /* VideoToolbox.framework in Frameworks */,
-				3F355EBD2332DE3200FF559E /* Structure.framework in Frameworks */,
 				3F7555DD21277E8A00B0B89D /* MetalPerformanceShaders.framework in Frameworks */,
 				77AAADA51CA5AFC500D91B6C /* Metal.framework in Frameworks */,
 				2A3F2BB01857FB1600EE7A96 /* MessageUI.framework in Frameworks */,
@@ -182,7 +164,6 @@
 		2AFC8D76176F966000F7F3B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3F355EBC2332DE3200FF559E /* Structure.framework */,
 				3F37E7602242A05F00C7EF10 /* libz.tbd */,
 				3F7555DE21277E9200B0B89D /* VideoToolbox.framework */,
 				3F7555DC21277E8A00B0B89D /* MetalPerformanceShaders.framework */,
@@ -279,7 +260,6 @@
 				2AFC8D70176F966000F7F3B5 /* Sources */,
 				2AFC8D71176F966000F7F3B5 /* Frameworks */,
 				2AFC8D72176F966000F7F3B5 /* Resources */,
-				3F5E177623319B460048CE71 /* Embed Frameworks */,
 				3F355EBF2332E25500FF559E /* Remove extra architectures */,
 			);
 			buildRules = (
